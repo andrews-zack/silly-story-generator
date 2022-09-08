@@ -1,5 +1,5 @@
 const customName = document.getElementById('customname');
-const randomize = document.getElementById('randomize');
+const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
 
 function randomValueFromArray(array){
