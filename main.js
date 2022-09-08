@@ -29,9 +29,9 @@ let xItem = randomValueFromArray(insertX);
 let yItem = randomValueFromArray(insertY);
 let zItem = randomValueFromArray(insertZ);
 
-newStory = newStory.replaceAll(':insertX:', xItem);
-newStory = newStory.replace(':insertY:', yItem);
-newStory = newStory.replace(':insertZ:', zItem);
+newStory = newStory.replaceAll(':insertX:', `${xItem}`);
+newStory = newStory.replace(':insertY:', `${yItem}`);
+newStory = newStory.replace(':insertZ:', `${zItem}`);
 
 randomize.addEventListener('click', result);
 
@@ -39,15 +39,15 @@ function result() {
 
   if(customName.value !== '') {
     const name = customName.value;
-    newStory.replace('Bob', name);
+    newStory.replace('Bob', `${name}`);
 
   }
 
   if(document.getElementById("uk").checked) {
     const weight = Math.round(300/14) + ' stone';
     const temperature =  Math.round((94-32)*(5/9)) + ' celsius';
-    newStory.replace('94 fahrenheit', temperature);
-    newStory.replace('300 pounds', weight);
+    newStory.replace('94 fahrenheit', `${temperature}`);
+    newStory.replace('300 pounds', `${weight}`);
   }
 
   story.textContent = newStory;
