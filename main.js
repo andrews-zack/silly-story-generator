@@ -24,6 +24,8 @@ let insertZ = [
     'turned into a slug and crawled away'
 ];
 
+let newStory = storyText;
+
 randomize.addEventListener('click', result);
 
 function result() {
@@ -40,7 +42,6 @@ function result() {
     newStory.replace('300 pounds', weight);
   }
 
-  let newStory = storyText;
   const xItem = randomValueFromArray(insertX);
   const yItem = randomValueFromArray(insertY);
   const zItem = randomValueFromArray(insertZ);
