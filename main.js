@@ -46,9 +46,9 @@ function result() {
   const yItem = randomValueFromArray(insertY);
   const zItem = randomValueFromArray(insertZ);
   
-  newStory = newStory.replaceAll(':insertX:', xItem);
-  newStory = newStory.replace(':insertY:', yItem);
-  newStory = newStory.replace(':insertZ:', zItem);
+  newStory = newStory.replaceAll(':insertx:', xItem);
+  newStory = newStory.replace(':inserty:', yItem);
+  newStory = newStory.replace(':insertz:', zItem);
 
   story.textContent = newStory;
   story.style.visibility = 'visible';
