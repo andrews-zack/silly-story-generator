@@ -32,14 +32,14 @@ function result() {
 
   if(customName.value !== '') {
     const name = customName.value;
-    newStory.replace('Bob', name);
+    newStory = newStory.replace('Bob', name);
   }
 
   if(document.getElementById("uk").checked) {
     const weight = Math.round(300/14) + ' stone';
     const temperature =  Math.round((94-32)*(5/9)) + ' celsius';
-    newStory.replace('94 fahrenheit', temperature);
-    newStory.replace('300 pounds', weight);
+    newStory = newStory.replace('94 fahrenheit', temperature);
+    newStory = newStory.replace('300 pounds', weight);
   }
 
   const xItem = randomValueFromArray(insertX);
