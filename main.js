@@ -1,4 +1,4 @@
-const customName = document.getElementById('customname');
+const customName = document.getElementById('customName');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
 
@@ -24,22 +24,13 @@ let insertZ = [
     'turned into a slug and crawled away'
 ];
 
-let newStory = storyText;
-let xItem = randomValueFromArray(insertX);
-let yItem = randomValueFromArray(insertY);
-let zItem = randomValueFromArray(insertZ);
-
-newStory = newStory.replaceAll(':insertX:', xItem);
-newStory = newStory.replace(':insertY:', yItem);
-newStory = newStory.replace(':insertZ:', zItem);
-
 randomize.addEventListener('click', result);
 
 function result() {
 
   if(customName.value !== '') {
     const name = customName.value;
-    newStory.replace('Bob', name);
+    newStory = newStory.replace('Bob', name);
   }
 
   if(document.getElementById("uk").checked) {
@@ -48,6 +39,15 @@ function result() {
     newStory.replace('94 fahrenheit', temperature);
     newStory.replace('300 pounds', weight);
   }
+
+  let newStory = storyText;
+  const xItem = randomValueFromArray(insertX);
+  const yItem = randomValueFromArray(insertY);
+  const zItem = randomValueFromArray(insertZ);
+  
+  newStory = newStory.replaceAll(':insertX:', xItem);
+  newStory = newStory.replace(':insertY:', yItem);
+  newStory = newStory.replace(':insertZ:', zItem);
 
   story.textContent = newStory;
   story.style.visibility = 'visible';
